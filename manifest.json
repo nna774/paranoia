@@ -1,0 +1,17 @@
+{
+  "name": "Paranoia",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "Https 接続を強制したいページについてリダイレクトする",
+  "content_scripts": [
+    {
+      "matches": ["http://*.wikipedia.org/*"
+                , "http://*.youtube.com/*"
+                , "http://ideone.com/*"
+                , "http://www.flickr.com/*"
+                 ],
+      "js": ["jquery.min.js","script.js"],
+      "run_at": "document_start"
+    }
+  ]
+}
